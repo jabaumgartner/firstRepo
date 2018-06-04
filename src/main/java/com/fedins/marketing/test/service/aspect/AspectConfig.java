@@ -5,7 +5,7 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
-@Configuration("marketing_test_service_aspect_config")
+@Configuration("marketing_test_service_aspect_configx")
 @EnableAspectJAutoProxy
 @Aspect
 public class AspectConfig {
