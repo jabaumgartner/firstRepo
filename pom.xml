@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.fedins.transaction.marketing</groupId>
+	<artifactId>test</artifactId>
+	<version>1.0.${BuildNumber}.RELEASE</version>
+	<packaging>jar</packaging>
+	<name>Federated Spring Transactional Application - marketing.test</name>
+	<url>http://www.federatedinsurance.com</url>
+	<description>Federated Spring Transactional Application - marketing.test</description>
+	<properties>
+		<fed.system>marketing</fed.system>
+		<fed.application>test</fed.application>
+	</properties>
+	<parent>
+		<groupId>com.fedins.parent</groupId>
+		<artifactId>parent-transaction</artifactId>
+		<version>1.0.2.RELEASE</version>
+	</parent>
+	<dependencies>
+		<dependency>
+		  <groupId>com.fedins.base</groupId>
+		  <artifactId>base-db2</artifactId>
+		  <type>pom</type>
+		</dependency>
+	</dependencies>
+
+</project>

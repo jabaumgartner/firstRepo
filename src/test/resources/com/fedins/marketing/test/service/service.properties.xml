@@ -1,0 +1,61 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+	
+	<context:property-placeholder properties-ref="testServiceProperties" order="10" ignore-unresolvable="true"/>
+	<context:property-placeholder properties-ref="testServiceCommonProperties" order="20" ignore-unresolvable="true"/>
+	
+	<!-- Put your non-environment dependent properties here -->	
+	<beans>
+		<util:properties id="testServiceCommonProperties">
+			<prop key="serviceName">testService</prop>
+			<!-- <prop key="key.name">value</prop> -->
+		</util:properties>
+	</beans>
+	
+	<!-- Put your environment dependent properties here -->	
+	<beans profile="test">
+		<util:properties id="testServiceProperties">
+			<!-- <prop key="key.name">value</prop> -->
+		</util:properties>
+	</beans>
+	<beans profile="dev1">
+		<util:properties id="testServiceProperties">
+		    <!-- <prop key="key.name">value</prop> -->
+		</util:properties>
+	</beans>
+	<beans profile="dev2">
+		<util:properties id="testServiceProperties">
+			<!-- <prop key="key.name">value</prop> -->
+		</util:properties>
+	</beans>
+	<beans profile="beta1">
+		<util:properties id="testServiceProperties">
+			<!-- <prop key="key.name">value</prop> -->
+		</util:properties>
+	</beans>
+	<beans profile="beta2">
+		<util:properties id="testServiceProperties">
+			<!-- <prop key="key.name">value</prop> -->
+		</util:properties>
+	</beans>
+	<beans profile="educ1">
+		<util:properties id="testServiceProperties">
+			<!-- <prop key="key.name">value</prop> -->
+		</util:properties>
+	</beans>
+	<beans profile="educ2">
+		<util:properties id="testServiceProperties">
+			<!-- <prop key="key.name">value</prop> -->
+		</util:properties>
+	</beans>
+	<beans profile="prod">
+		<util:properties id="testServiceProperties">
+			<!-- <prop key="key.name">value</prop> -->
+		</util:properties>
+	</beans>
+</beans>
